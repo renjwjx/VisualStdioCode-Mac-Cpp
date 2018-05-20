@@ -9,6 +9,7 @@
                 "-o",
                 "helloworld",
                 "helloworld.c",
+                "Singleton.cpp",
                 "-g",
                 "-v"
             ],

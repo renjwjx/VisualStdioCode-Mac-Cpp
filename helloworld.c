@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Singleton.h"
 
 void SelectSort(int data[], int n);
 void QuickSort(int data[], int low, int high);
@@ -18,12 +19,16 @@ int main() {
     int data[10] = {32, 16, 9, 21, 10, 13, 47, 45, 67, 34};
     // SelectSort(data, 10);
     // QuickSort(data, 0, 9);
-    ShellSort(data, 10);
-    for ( int i = 0; i < 10; i++)
-    {
-        printf("%d, ", data[i]);
-    }
+    // ShellSort(data, 10);
+    // for ( int i = 0; i < 10; i++)
+    // {
+    //     printf("%d, ", data[i]);
+    // }
 
+    Singleton* singleton = Singleton::GetInstance();
+    singleton->show();
+
+    return 0;
 
 }
 
