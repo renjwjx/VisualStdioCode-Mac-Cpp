@@ -23,6 +23,8 @@ In the .vscode folder (which will be hidden in the Finder) - 3 files required fo
 * launch.json - specifies how to build then debug helloworld.c
 * c_cpp_properties.json - specifies the location of c/c++ include files
 
+### Ref
+https://code.visualstudio.com/docs/languages/cpp
 
 ### To use
 
