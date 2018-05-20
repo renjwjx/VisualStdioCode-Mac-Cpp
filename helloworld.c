@@ -7,10 +7,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Singleton.h"
+#include "Resume.h"
+#include <iostream>
 
 void SelectSort(int data[], int n);
 void QuickSort(int data[], int low, int high);
 void ShellSort(int data[], int n);
+void printData(int data[], int n);
 
 int main() {
 
@@ -20,14 +23,20 @@ int main() {
     // SelectSort(data, 10);
     // QuickSort(data, 0, 9);
     // ShellSort(data, 10);
-    // for ( int i = 0; i < 10; i++)
-    // {
-    //     printf("%d, ", data[i]);
-    // }
+    printData(data, sizeof(data));
 
+//Design Patterns-- singleton
     Singleton* singleton = Singleton::GetInstance();
     singleton->show();
 
+//Design Patterns -- prototype
+    Resume *r1 = new ResumeA("r2");
+    Resume *r2 = r1->Clone();
+    r2->Set("r2");
+    r1->Show();
+    r2->Show();
+
+    std::cout<<"main() Exit"<<std::endl;
     return 0;
 
 }
@@ -114,5 +123,13 @@ void ShellSort(int data[], int n)
             }
         }
         ++i;
+    }
+}
+
+void printData(int data[], int n)
+{
+    for ( int i = 0; i < 10; i++)
+    {
+        printf("%d, ", data[i]);
     }
 }

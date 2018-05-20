@@ -10,6 +10,7 @@
                 "helloworld",
                 "helloworld.c",
                 "Singleton.cpp",
+                "Resume.cpp",
                 "-g",
                 "-v"
             ],
