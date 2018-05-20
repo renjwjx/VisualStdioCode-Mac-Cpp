@@ -11,6 +11,8 @@
                 "helloworld.c",
                 "Singleton.cpp",
                 "Resume.cpp",
+                "ConcreteReplaceAlgorithm.cpp",
+                "Cache.cpp",
                 "-g",
                 "-v"
             ],

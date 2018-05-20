@@ -14,5 +14,5 @@ Singleton* Singleton::GetInstance()
 
 void Singleton::show()
 {
-    printf("Singleton show");
+    printf("Singleton show\n");
 }

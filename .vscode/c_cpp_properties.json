@@ -9,9 +9,16 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "",
                 "path": [
-                    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+                    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+                    "${workspaceRoot}"
                 ]
-            }
+            },
+            "intelliSenseMode": "clang-x64",
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
         }
-    ]
+    ],
+    "version": 4
 }

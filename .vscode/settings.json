@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "singleton.h": "c",
+        "iostream": "c",
+        "cache.h": "c",
+        "replacealgorithm.h": "c"
+    }
+}

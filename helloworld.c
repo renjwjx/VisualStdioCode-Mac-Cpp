@@ -9,6 +9,9 @@
 #include "Singleton.h"
 #include "Resume.h"
 #include <iostream>
+#include "Cache.h"
+#include "ReplaceAlgorithm.h"
+
 
 void SelectSort(int data[], int n);
 void QuickSort(int data[], int low, int high);
@@ -16,8 +19,6 @@ void ShellSort(int data[], int n);
 void printData(int data[], int n);
 
 int main() {
-
-    int i = 1233;
     
     int data[10] = {32, 16, 9, 21, 10, 13, 47, 45, 67, 34};
     // SelectSort(data, 10);
@@ -25,16 +26,24 @@ int main() {
     // ShellSort(data, 10);
     printData(data, sizeof(data));
 
-//Design Patterns-- singleton
+//Design Patterns-- Singleton
+    printf("Design Patterns -- Singleton");
     Singleton* singleton = Singleton::GetInstance();
     singleton->show();
 
-//Design Patterns -- prototype
+//Design Patterns -- Prototype
+    printf("Design Patterns -- Prototype");
     Resume *r1 = new ResumeA("r2");
     Resume *r2 = r1->Clone();
     r2->Set("r2");
     r1->Show();
     r2->Show();
+
+
+//Design Patterns -- Strategy
+    printf("Design Patterns -- Strategy");
+    Cache cache(new FIFO_ReplaceAlgorithm());
+    cache.Replace();
 
     std::cout<<"main() Exit"<<std::endl;
     return 0;
@@ -132,4 +141,5 @@ void printData(int data[], int n)
     {
         printf("%d, ", data[i]);
     }
+    printf("\n");
 }
