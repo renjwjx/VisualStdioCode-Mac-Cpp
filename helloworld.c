@@ -10,8 +10,6 @@
 #include "Resume.h"
 #include <iostream>
 #include "Cache.h"
-#include "ReplaceAlgorithm.h"
-
 
 void SelectSort(int data[], int n);
 void QuickSort(int data[], int low, int high);

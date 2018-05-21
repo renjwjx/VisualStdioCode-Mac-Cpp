@@ -1,5 +1,4 @@
 #include "Cache.h"
-#include "ReplaceAlgorithm.h"
 
 #include <stdio.h>
 

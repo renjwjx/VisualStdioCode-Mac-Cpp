@@ -1,6 +1,4 @@
-// #include "ReplaceAlgorithm.h"
-
-class ReplaceAlgorithm;
+ #include "ReplaceAlgorithm.h"
 
 class Cache
 {
