@@ -11,6 +11,9 @@
 #include <iostream>
 #include "Cache.h"
 
+#include "Composite.h"
+#include "Leaf.h"
+
 void SelectSort(int data[], int n);
 void QuickSort(int data[], int low, int high);
 void ShellSort(int data[], int n);
@@ -43,9 +46,26 @@ int main() {
     Cache cache(new FIFO_ReplaceAlgorithm());
     cache.Replace();
 
+
+    printf("Design Patterns -- Composite");
+
+    Component *pRoot = new Composite("000");
+
+    Component *pDepart1 = new Composite("111");
+    pDepart1->Add(new Leaf("22221"));
+    pDepart1->Add(new Leaf("22222"));
+    pRoot->Add(pDepart1);
+
+    pRoot->Add(new Leaf("112"));
+    Component *pLeaf = new Leaf("113");
+    pRoot->Add(pLeaf);
+    
+    pRoot->Operation(1);
+
+    delete pRoot;
+
     std::cout<<"main() Exit"<<std::endl;
     return 0;
-
 }
 
 void SelectSort(int data[], int n)
